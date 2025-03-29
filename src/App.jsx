@@ -1,4 +1,5 @@
 import iconStar from "./assets/icon-star.svg"
+import illustrationThankYou from "./assets/illustration-thank-you.svg"
 import { useState } from "react"
 
 export function App () {
@@ -18,9 +19,8 @@ export function App () {
   }
 
   return (
-   <div className="h-svh bg-very-dark-blue text-white flex justify-center items-center px-6">
-     {submited == false ? (
-      <div className="bg-radial-gradient max-w-103 px-6 pt-6 pb-8 rounded-2xl">
+     submited == false ? (
+      <div className="bg-radial-gradient max-w-103 px-6 pt-6 pb-8 rounded-2xl font-overpass">
        
       <div className="bg-dark-blue p-4 w-fit rounded-full mb-4">
       <img src={iconStar} alt="ícone da estrela" />
@@ -41,8 +41,9 @@ export function App () {
         <button className="bg-orange w-full py-3 rounded-3xl uppercase font-bold tracking-1" onClick={handleSubmited}>Submit</button>
     </div>
      ) : ( 
-      <p>Outro código</p>
-     )}
-   </div>
+      <div className="bg-radial-gradient max-w-103 px-6 pt-6 pb-8 rounded-2xl font-overpass">
+        <img src={illustrationThankYou} alt="illudtration Thank You" />
+      </div>
+     )
   )
 }
